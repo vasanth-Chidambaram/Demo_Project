@@ -17,7 +17,7 @@ on:
       - 'dev-*' # dev-new  or dev-new-this-is
       - 'dev/**' # dev/feet/id   or dev/feet/devs/is
     paths:
-      - 'src/**' # workflow will get triggered if we push any changes to this path
+      - '.github/workflows/*' # workflow will get triggered if we push any changes to this path
 jobs:
   deploy:
     runs-on: ubuntu-latest
