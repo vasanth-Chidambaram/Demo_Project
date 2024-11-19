@@ -20,7 +20,7 @@ on:
     #  paths-ignore:
      #  - '.github/workflows/*' # workflow will not get triggered if we push any changes to the path thats come under the filter (paths-ignore)
     paths:
-      - 'src/*' # workflow will get triggered if we push any changes to this path
+      - 'src/**' # workflow will get triggered if we push any changes to this path
 jobs:
   deploy:
     runs-on: ubuntu-latest
