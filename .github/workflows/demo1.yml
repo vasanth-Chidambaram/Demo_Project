@@ -6,6 +6,7 @@ on:
       - closed
     branches:
       - main  #main
+      - dev   #dev
       - 'dev-*' # dev-new  or dev-new-this-is
       - 'dev/**' # dev/feet/id   or dev/feet/devs/is
   workflow_dispatch:
