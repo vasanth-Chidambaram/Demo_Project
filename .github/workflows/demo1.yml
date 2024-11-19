@@ -21,6 +21,7 @@ on:
     # you may only define one of `paths` and `paths-ignore` for a single event, so i commented paths-ignore
     # paths-ignore:
      #  - '.github/workflows/*' # workflow will not get triggered if we push any changes to the path thats come under the filter (paths-ignore)
+     #testing skip workflow
 jobs:
   deploy:
     runs-on: ubuntu-latest
