@@ -13,6 +13,7 @@ on:
   push:
     branches:
       - main  #main
+      - dev
       - 'dev-*' # dev-new  or dev-new-this-is
       - 'dev/**' # dev/feet/id   or dev/feet/devs/is
       # you may only define one of `paths` and `paths-ignore` for a single event, so i commented paths-ignore
