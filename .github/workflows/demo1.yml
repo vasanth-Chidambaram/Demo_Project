@@ -14,8 +14,9 @@ on:
       - main  #main
       - 'dev-*' # dev-new  or dev-new-this-is
       - 'dev/**' # dev/feet/id   or dev/feet/devs/is
-    paths-ignore:
-      - '.github/workflows/*' # workflow will not get triggered if we push any changes to the path thats come under the filter (paths-ignore)
+      # you may only define one of `paths` and `paths-ignore` for a single event, so i commented paths-ignore
+    #  paths-ignore:
+     #  - '.github/workflows/*' # workflow will not get triggered if we push any changes to the path thats come under the filter (paths-ignore)
     paths:
       - 'src/*' # workflow will get triggered if we push any changes to this path
 jobs:
