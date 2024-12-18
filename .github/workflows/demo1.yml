@@ -4,11 +4,40 @@ on:
     types:
       - opened
       - closed
+    branches:
+      - main  #main
+      - dev   #dev
+      - 'dev-*' # dev-new  or dev-new-this-is
+      - 'dev/**' # dev/feet/id   or dev/feet/devs/is
   workflow_dispatch:
+  push:
+    branches:
+      - main  #main
+      - dev
+      - 'dev-*' # dev-new  or dev-new-this-is
+      - 'dev/**' # dev/feet/id   or dev/feet/devs/is
+    paths:
+      - '.github/workflows/*' # workflow will get triggered if we push any changes to this path
+    # you may only define one of `paths` and `paths-ignore` for a single event, so i commented paths-ignore
+    # paths-ignore:
+     #  - '.github/workflows/*' # workflow will not get triggered if we push any changes to the path thats come under the filter (paths-ignore)
+     #testing skip workflow again
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout branch
+        uses: actions/checkout@v3
+        with: 
+          repository: vasanth-Chidambaram/gh-first-action
+          path: my-tools
+
+      - name: cd into my-tools
+        run: |
+          pwd
+          cd my-tools
+          ls -lrt
+          
       - name: Output event data
         run: echo "${{ toJSON(github.event) }}"
       - name: Get code
