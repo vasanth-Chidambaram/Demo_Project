@@ -26,6 +26,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout branch
+        uses: actions/checkout@v3
+        with: 
+          repository: vasanth-Chidambaram/gh-first-action
+          path: my-tools
+
+      - name: cd into my-tools
+        run: |
+          cd my-tools
+          ls - lrt
+          pwd
       - name: Output event data
         run: echo "${{ toJSON(github.event) }}"
       - name: Get code
